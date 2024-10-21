@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAF - Tableau de bord</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="kaspersky-theme">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/waf-logo.png" alt="WAF Logo">
+                <h1>Web Application Firewall</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                    <!-- Autres liens de navigation -->
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Tableau de bord</h2>
+            <section class="dashboard-overview">
+                <div class="status-card">
+                    <h3>Statut de protection</h3>
+                    <div id="protection-status" class="status-indicator protected">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Protégé</span>
+                    </div>
+                </div>
+                <div class="quick-actions">
+                    <button id="quick-scan" class="action-button"><i class="fas fa-search"></i> Scan rapide</button>
+                    <button id="update-database" class="action-button"><i class="fas fa-sync"></i> Mise à jour</button>
+                </div>
+            </section>
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3>Menaces détectées</h3>
+                    <p id="threats-detected" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-ban"></i>
+                    <h3>IP bloquées</h3>
+                    <p id="blocked-ips" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-file-archive"></i>
+                    <h3>Fichiers en quarantaine</h3>
+                    <p id="quarantined-files" class="stat-value">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Dernier scan complet</h3>
+                    <p id="last-full-scan" class="stat-value">Il y a 2 jours</p>
+                </div>
+            </section>
+            <section class="dashboard-charts">
+                <div class="chart-container">
+                    <canvas id="threatsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="scanActivityChart"></canvas>
+                </div>
+            </section>
+            <section class="recent-activity">
+                <h3>Activité récente</h3>
+                <ul id="activity-list">
+                    <!-- Les activités récentes seront ajoutées ici dynamiquement -->
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 WAF Dashboard. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

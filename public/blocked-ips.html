@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAF - IP bloquées</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Web Application Firewall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dashboard.html">Tableau de bord</a></li>
+                <li><a href="logs.html">Logs</a></li>
+                <li><a href="quarantine.html">Quarantaine</a></li>
+                <li><a href="blocked-ips.html" class="active">IP bloquées</a></li>
+                <li><a href="scan.html">Scan</a></li>
+                <li><a href="backups.html">Sauvegardes</a></li>
+                <li><a href="config.html">Configuration</a></li>
+                <li><a href="ip-check.html">Vérification IP</a></li>
+                <li><a href="api-limits.html">Limites API</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>IP bloquées</h2>
+        <ul id="blocked-ips-list">
+            <!-- Les IP bloquées seront insérées ici dynamiquement -->
+        </ul>
+        <h3>Bloquer une nouvelle IP</h3>
+        <form id="block-ip-form">
+            <input type="text" id="ip-to-block" placeholder="Entrez l'adresse IP" required>
+            <button type="submit">Bloquer</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 WAF Dashboard. Tous droits réservés.</p>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/blocked-ips.js"></script>
+</body>
+</html>

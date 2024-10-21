@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAF - Configuration</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Web Application Firewall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dashboard.html">Tableau de bord</a></li>
+                <li><a href="logs.html">Logs</a></li>
+                <li><a href="quarantine.html">Quarantaine</a></li>
+                <li><a href="blocked-ips.html">IP bloquées</a></li>
+                <li><a href="scan.html">Scan</a></li>
+                <li><a href="backups.html">Sauvegardes</a></li>
+                <li><a href="config.html" class="active">Configuration</a></li>
+                <li><a href="ip-check.html">Vérification IP</a></li>
+                <li><a href="api-limits.html">Limites API</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Configuration du WAF</h2>
+        <form id="config-form">
+            <label for="domain">Domaine:</label>
+            <input type="text" id="domain" name="DOMAIN" required>
+            
+            <label for="public-html-dir">Répertoire public_html:</label>
+            <input type="text" id="public-html-dir" name="PUBLIC_HTML_DIR" required>
+            
+            <label for="backup-dir">Répertoire de sauvegarde:</label>
+            <input type="text" id="backup-dir" name="BACKUP_DIR" required>
+            
+            <label for="quarantine-dir">Répertoire de quarantaine:</label>
+            <input type="text" id="quarantine-dir" name="QUARANTINE_DIR" required>
+            
+            <label for="port">Port:</label>
+            <input type="number" id="port" name="PORT" required>
+            
+            <button type="submit">Mettre à jour la configuration</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 WAF Dashboard. Tous droits réservés.</p>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/config.js"></script>
+</body>
+</html>

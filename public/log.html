@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAF - Logs</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Web Application Firewall</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dashboard.html">Tableau de bord</a></li>
+                <li><a href="logs.html" class="active">Logs</a></li>
+                <!-- Autres liens de navigation -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Logs du système</h2>
+        <table id="logs-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type d'événement</th>
+                    <th>Détails</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les logs seront insérés ici dynamiquement -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 WAF Dashboard. Tous droits réservés.</p>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/logs.js"></script>
+</body>
+</html>

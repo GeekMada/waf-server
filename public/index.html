@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAF - Tableau de bord</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="kaspersky-theme">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/waf-logo.png" alt="WAF Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="dashboard.html">Tableau de bord</a></li>
+                    <li><a href="logs.html">Logs</a></li>
+                    <li><a href="quarantine.html">Quarantaine</a></li>
+                    <li><a href="blocked-ips.html">IP bloquées</a></li>
+                    <li><a href="scan.html">Scan</a></li>
+                    <li><a href="backups.html">Sauvegardes</a></li>
+                    <li><a href="config.html">Configuration</a></li>
+                    <li><a href="ip-check.html">Vérification IP</a></li>
+                    <li><a href="api-limits.html">Limites API</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="welcome-section">
+                <h2>Bienvenue sur votre Web Application Firewall</h2>
+                <p>Protégez votre application web contre les menaces avec notre solution de sécurité avancée.</p>
+            </section>
+            <section class="quick-stats">
+                <div class="stat-card">
+                    <h3>Statut de protection</h3>
+                    <p id="protection-status" class="status-text"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Menaces bloquées</h3>
+                    <p id="threats-blocked" class="status-value"></p>
+                </div>
+                <div class="stat-card">
+                    <h3>Dernier scan</h3>
+                    <p id="last-scan" class="status-text"></p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 WAF Dashboard. Tous droits réservés.</p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
