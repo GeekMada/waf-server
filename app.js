@@ -16,8 +16,14 @@ const execPromise = util.promisify(exec);
 
 const app = express();
 const port = process.env.PORT || 4989;
+app.use(express.static(PUBLIC_HTML_DIR));
 
 app.use(bodyParser.json());
+
+// Endpoint à la racine pour rediriger vers index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(PUBLIC_HTML_DIR, 'index.html'));
+});
 
 // Configuration spécifique
 const DOMAIN = process.env.DOMAIN;
