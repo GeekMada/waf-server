@@ -1,0 +1,33 @@
+graph TD
+    A[Démarrage du Serveur] --> B{Initialisation}
+    B --> |Configuration| C[Chargement des variables d'environnement]
+    B --> |Base de données| D[Initialisation SQLite]
+    B --> |Antivirus| E[Initialisation ClamAV]
+    
+    C --> F[Configuration des API]
+    F --> |VirusTotal| G[Clé API VirusTotal]
+    F --> |AbuseIPDB| H[Clé API AbuseIPDB]
+    
+    D --> I[Création des tables]
+    I --> J[Chargement des IP bloquées]
+    
+    E --> K[Scan initial]
+    
+    K --> L{Boucle Principale}
+    L --> |Chaque requête| M{Middleware de blocage IP}
+    M --> |IP bloquée| N[Refus d'accès]
+    M --> |IP autorisée| O[Traitement de la requête]
+    
+    O --> |Scan de fichier| P[ClamAV Scan]
+    O --> |Vérification IP| Q[AbuseIPDB Check]
+    O --> |Vérification fichier| R[VirusTotal Check]
+    
+    P --> |Fichier infecté| S[Mise en quarantaine]
+    Q --> |IP suspecte| T[Blocage IP]
+    R --> |Fichier malveillant| U[Alerte et Log]
+    
+    L --> |Périodiquement| V[Tâches planifiées]
+    V --> W[Scan quotidien]
+    V --> X[Sauvegarde incrémentielle]
+    V --> Y[Nettoyage des anciennes sauvegardes]
+    V --> Z[Réinitialisation des compteurs API]
