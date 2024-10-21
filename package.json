@@ -1,0 +1,43 @@
+{
+    "name": "waf-server",
+    "version": "1.0.0",
+    "description": "Serveur WAF (Web Application Firewall) avec fonctionnalités avancées de sécurité",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "waf",
+      "security",
+      "antivirus",
+      "backup",
+      "ip-blocking"
+    ],
+    "author": {
+      "name": "Aheshman Itibar",
+      "email": "contact@iamarketings.fr",
+      "url": "https://iamarketings.fr"
+    },
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/GeekMada/waf-server.git"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "axios": "^0.21.1",
+      "clamscan": "^2.1.2",
+      "dotenv": "^10.0.0",
+      "fs-extra": "^10.0.0",
+      "sqlite3": "^5.0.2",
+      "body-parser": "^1.19.0"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    },
+    "private": true,
+    "contactInfo": {
+      "whatsapp": "+269325193231"
+    }
+  }
