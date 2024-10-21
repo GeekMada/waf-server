@@ -2,6 +2,19 @@
 
 Ce projet implémente un serveur WAF (Web Application Firewall) avec des fonctionnalités avancées de sécurité et de gestion pour la protection des sites web.
 
+## Avis important sur l'utilisation et la licence
+
+**Ce code n'est pas gratuit pour tout usage. Toute utilisation de ce code nécessite une autorisation préalable et est soumise à des frais.**
+
+Pour obtenir l'autorisation d'utiliser ce code ou pour discuter des conditions d'utilisation, veuillez contacter l'auteur :
+
+- Nom: Aheshman Itibar
+- Email: contact@iamarketings.fr
+- Site web: https://iamarketings.fr
+- WhatsApp: +269325193231
+
+Toute utilisation non autorisée de ce code est strictement interdite et peut entraîner des poursuites légales.
+
 ## Fonctionnalités principales
 
 - Scan antivirus avec ClamAV
@@ -25,7 +38,7 @@ Ce projet implémente un serveur WAF (Web Application Firewall) avec des fonctio
 1. Clonez ce dépôt
 2. Installez les dépendances : `npm install`
 3. Configurez les variables d'environnement dans un fichier `.env`
-4. Lancez le serveur : `node server.js`
+4. Lancez le serveur : `node app.js`
 
 ## Configuration
 
@@ -74,8 +87,11 @@ ABUSEIPDB_API_KEY=votre_clé_api_abuseipdb
 
 ## Contribution
 
-Les contributions sont les bienvenues. Veuillez ouvrir une issue pour discuter des changements majeurs avant de soumettre un pull request.
+Les contributions sont les bienvenues, mais doivent être approuvées par l'auteur. Veuillez ouvrir une issue pour discuter des changements majeurs avant de soumettre un pull request.
 
 ## Licence
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Ce projet est sous licence propriétaire. L'utilisation, la modification, la distribution ou la reproduction de ce code, en tout ou en partie, nécessite une autorisation écrite explicite de l'auteur, Aheshman Itibar.
+
+© 2024 Aheshman Itibar. Tous droits réservés.
+
